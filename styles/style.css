@@ -1,0 +1,238 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&display=swap');
+/* common styles and utilities*/
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3d2d2;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.container{
+    Width: 1242px;
+    background-color: whitesmoke;
+    padding: 25px 100px 0 100px; 
+}
+.link-button{
+    width: 166px;
+    margin-top: 20px;
+    padding: 10px 26px;
+    border-radius:30px ;
+    font-size: 16px;
+    color: mintcream;
+    background-color: #FF1541;
+    text-decoration: none;
+    text-align: center;   
+}
+ 
+/*--------------------
+   Top banner style
+---------------------*/
+
+.banner{
+    background-color: #009bb4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center ;
+    justify-items: center;
+    padding: 25px 0;
+    margin: -25px -100px  0 -100px; 
+    overflow: hidden;
+}
+.banner-info{
+    padding-left: 100px;
+
+}
+.banner-title{
+    font-size: 64px;
+    color: #FFFFFF;
+   
+}
+.banner img{
+    width: 556px;
+    height: 438px;
+    position: relative;
+    overflow: hidden;    
+}
+.banner:hover .banner-img{
+    transform: scale(1.2);
+    transition: transform 3s ease-in-out; 
+}
+ 
+/*---------------------
+   top players style 
+--------------------- */
+.content-box-title{
+    color:  mediumblue;
+    font-size: 32px;
+    margin: 50px 0 30px 0;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 47px;
+    
+}
+.player{
+    width: 350px;
+    height: 440px;
+    background-color: rgb(46, 39, 39);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.233); 
+    overflow: hidden;
+}
+ 
+.player .thumbnail img{
+    width: 100%;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+.player-detail{
+    color:#FFFFFF;
+    padding: 0px 15px;
+    margin-top: 0;
+   
+}
+.player-name{
+    font-size: 26px;
+    margin: 15px 0 0 0;
+}
+.player-name a{
+    text-decoration: none;
+    color: orange;
+}
+.player:hover .thumbnail img{
+    transform: scale(1.2);
+    transition: transform 3s ease-in-out; 
+}
+/*------------------------------------
+     tournament statistics style
+------------------------------------ */
+.statistics{
+    display:grid;
+    grid-template-columns:repeat(3,1fr) ; 
+    grid-row-gap: 40px;
+    
+}
+.stats-box{
+    background-color: rgba(26, 29, 29, 0.452);
+    width: 350px;
+    height: 200px;
+    border-radius: 15px;   
+}
+.stats-box-item{
+    padding: 20px 20px;
+}
+.stats-label{
+    color: rgba(255,255,255,.8);
+    font-size: 20px;
+    margin: 0;
+    position: relative;
+}
+.stats-value{
+    color: #F7A600;
+    font-size: 75px;
+    margin: 0;
+}
+.stats-value-fract{
+    font-size: 25px;
+    margin: 0 0 -4px -24px;
+    
+}
+
+/*-----------------------
+  Euro highlight style
+ -----------------------*/
+ .highlight-files{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);    
+    align-items: center;
+    justify-content: space-between;
+     
+}
+.highlight-detail{
+    width: 466px;
+    
+} 
+.link-button-videos{
+   padding-top: 60px;
+}
+.highlight-image{
+    padding: 20px;
+}
+
+.highlight-image img{
+    width: 567px;
+    height: 327px;
+}
+
+/* --------------------
+       footer-style
+----------------------- */
+
+.footers{  
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center ;
+        justify-items: center;
+}
+.footer-logo img{
+    width: 383px;
+    height: 333px;
+}
+
+.icon{
+    font-size:  2em;
+    margin: 0;
+}
+.fa-facebook-square{
+    color: rgb(9, 48, 165);
+    padding-right: 5px;
+}
+.fa-twitter-square{
+    color: royalblue ;
+    padding-right: 5px;
+}
+.fa-envelope{
+    color: rgb(146, 79, 32);
+    padding-right: 5px;
+}
+.fa-image{
+    color: yellow;
+    padding-right: 5px;
+} 
+
+/*--------------------- 
+     Media Quaries
+----------------------*/
+/*------- Mobile devices------ */
+
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .banner, .players, .statistics, .highlight-files, .footers{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+    
+}
+/*-------- Tablet Devices ----------*/
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .banner,.players{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+
+    }
+    .statistics, .highlight-files, .footers{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+    
+}
